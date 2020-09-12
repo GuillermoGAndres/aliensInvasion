@@ -1,6 +1,7 @@
 import sys # Para controlar la salida del juego
 import pygame
 from settings import Settings # Importamos la clase Settings del module settings
+from ship from Ship
 
 
 class AlienInvasion:
@@ -14,6 +15,8 @@ class AlienInvasion:
                 (self.settings.screen_width, self.settings.screen_height) ) # Devuelve un objeto called surface que representa un componente en la pantalla, de tamaño 1200x800.
         pygame.display.set_caption("Alien Invasion") # Ajusta el title
 
+        self.ship = Ship(self) # Create instance of ship form game.
+
 
     def run_game(self):
         """Start the main loop for the game"""
@@ -26,6 +29,7 @@ class AlienInvasion:
 
             # Redraw the screen during each pass through the looṕ
             self.screen.fill(self.settings.bg_color)
+            self.ship.blitme() # Draw ship
 
             # Make the most recently draw screen visible.
             pygame.display.flip() # udpate screen and borrow old screen.
