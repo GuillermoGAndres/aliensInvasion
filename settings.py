@@ -9,3 +9,9 @@ class Settings:
         self.screen_height = 800
         self.bg_color = (230, 230, 230) # Tuple with RGB colors.
 
+        #Ship settings
+        self.ship_speed = 1.5 #more fine speed.
+
+
+
+
